@@ -84,5 +84,5 @@ If you'd like to have your T-display be portable and not have to leave it plugge
 - The connector on the board for the battery is displayed below:
 <img width="426" height="321" alt="Screenshot 2026-08-26 214645" src="https://github.com/user-attachments/assets/8aff3d40-26cb-4974-8f70-45a8f1a23e43" />
 
-
+# Congrats!
 You should now have a fully functioning mini slideshow display with buttons to sift through your pictures!
