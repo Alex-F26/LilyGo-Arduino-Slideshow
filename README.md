@@ -15,4 +15,4 @@ Steps to follow:
 <img width="307" height="63" alt="Screenshot 2026-08-26 204016" src="https://github.com/user-attachments/assets/c5e1d8c1-6c78-4cab-b4b2-0c77421edf22" />
   
 - Change your file extension from imageName.c to imageName.h to allow the program to compile it. You may change the extension from your IDE by renaming the file or in File explorer by going to 'View' -> Show -> File name extensions and change them there.
-- 
+- Adjust your directory files. Once your have all of your images downloaded and extensions changed, I recommend changing all of their names to something easy and memorable.
