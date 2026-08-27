@@ -29,7 +29,7 @@ There are multiple ways to get your ESP32 to read and display your images, I cho
 - Once all this is done, move all of your image.h files directly into the same directory as your slideshow.ino program file. No subfolder or anything required.
 - Now depending on what you named your files and how many you added, you may need to change the code slightly.
 
-# Code adjustments and Logic Explanation
+# Code adjustments
 As stated above, some minor adjustments may need to take place in order for your program to work, nothing too crazy, I promise!  
 - Below are some simple if-statements with instructions, I figure this format is fitting since if-statements are part of our nature as coders.
   
