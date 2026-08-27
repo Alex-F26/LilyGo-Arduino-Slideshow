@@ -6,62 +6,14 @@
 #include "imagePT1.h"
 #include "imagePT2.h"
 #include "imagePT3.h"
-#include "imagePT4.h"
-#include "imagePT5.h"
-#include "imagePT6.h"
-#include "imagePT7.h"
-#include "imagePT8.h"
-#include "imagePT9.h"
-#include "imagePT10.h"
-#include "imagePT11.h"
-#include "imagePT12.h"
-#include "imagePT13.h"
-#include "imagePT14.h"
-#include "imagePT15.h"
-#include "imagePT16.h"
-#include "imagePT17.h"
-#include "imagePT18.h"
-#include "imagePT19.h"
-#include "imagePT20.h"
-#include "imagePT21.h"
-#include "imagePT22.h"
-#include "imagePT23.h"
-#include "imagePT24.h"
-#include "imagePT25.h"
-#include "imagePT26.h"
-#include "imagePT27.h"
-#include "imagePT28.h"
-#include "imagePT29.h"
-#include "imagePT30.h"
-#include "imagePT31.h"
-#include "imagePT32.h"
-#include "imagePT33.h"
+
 
 // landscapes
 #include "imageLS0.h"
 #include "imageLS1.h"
 #include "imageLS2.h"
 #include "imageLS3.h"
-#include "imageLS4.h"
-#include "imageLS5.h"
-#include "imageLS6.h"
-#include "imageLS8.h"
-#include "imageLS9.h"
-#include "imageLS11.h"
-#include "imageLS13.h"
-#include "imageLS14.h"
-#include "imageLS15.h"
-#include "imageLS17.h"
-#include "imageLS19.h"
-#include "imageLS20.h"
-#include "imageLS21.h"
-#include "imageLS22.h"
-#include "imageLS23.h"
-#include "imageLS24.h"
-#include "imageLS25.h"
-#include "imageLS27.h"
-#include "imageLS28.h"
-#include "imageLS29.h"
+
 
 
 // array portrait
@@ -70,36 +22,6 @@ const short unsigned int* portrait[] PROGMEM = {
   imagePT1,
   imagePT2,
   imagePT3,
-  imagePT4,
-  imagePT5,
-  imagePT6,
-  imagePT7,
-  imagePT8,
-  imagePT9,
-  imagePT10,
-  imagePT11,
-  imagePT12,
-  imagePT13,
-  imagePT14,
-  imagePT15,
-  imagePT16,
-  imagePT17,
-  imagePT18,
-  imagePT19,
-  imagePT20,
-  imagePT21,
-  imagePT22,
-  imagePT23,
-  imagePT24,
-  imagePT25,
-  imagePT26,
-  imagePT27,
-  imagePT28,
-  imagePT29,
-  imagePT30,
-  imagePT31,
-  imagePT32,
-  imagePT33,
   NULL
 };
 
@@ -111,26 +33,6 @@ const short unsigned int* landscape[] PROGMEM = {
   imageLS1,
   imageLS2,
   imageLS3,
-  imageLS4,
-  imageLS5,
-  imageLS6,
-  imageLS8,
-  imageLS9,
-  imageLS11,
-  imageLS13,
-  imageLS14,
-  imageLS15,
-  imageLS17,
-  imageLS19,
-  imageLS20,
-  imageLS21,
-  imageLS22,
-  imageLS23,
-  imageLS24,
-  imageLS25,
-  imageLS27,
-  imageLS28,
-  imageLS29,
   NULL
 };
 
