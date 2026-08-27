@@ -78,4 +78,11 @@ This project was made to fit inside a Kingdom Hearts - Pink Agaricus, so I neede
   - I soldered the end of one wire to pin 21 and the other end of the wire to one side of the button.
   - I soldered a DIFFERENT wire to the top G pin and the other end of the wire to the other side of the button that was not used.
 
+# Battery Type
+If you'd like to have your T-display be portable and not have to leave it plugged in to your pc for it to work, below is the battery I used.
+- 3.7 V LiPo battery (230 mAh) with a JST connector that plugs into the back of the LilyGo board
+- The connector on the board for the battery is displayed below:
+<img width="426" height="321" alt="image" src="https://github.com/user-attachments/assets/8df4d2ac-d625-4763-be4e-9ae87565a1cf" />
+
+
 You should now have a fully functioning mini slideshow display with buttons to sift through your pictures!
