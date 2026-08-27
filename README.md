@@ -16,4 +16,4 @@ Steps to follow:
   
 - Change your file extension from imageName.c to imageName.h to allow the program to compile it. You may change the extension from your IDE by renaming the file or in File explorer by going to 'View' -> Show -> File name extensions and change them there.
 - Adjust your directory files. Once your have all of your images downloaded and extensions changed, I recommend changing all of their names to something easy to sort through. For my portrait images I renamed them all to imagePT0, imagePT1... and so on. You can change them in bulk by using a command in your terminal.
- - d
+  - d
