@@ -1,12 +1,13 @@
 # Picture Slideshow on an ESP32 LilyGo T-display  
 
-The code provided is an implementation of both portrait and landscape photos, choose whichever orientation suits your project best.  
+The code provided is an implementation of both portrait and landscape photos, choose whichever orientation suits your project best.   
 
-# Image Conversions & Code Integration  
+# Library Dependencies
+There are multiple ways to get your ESP32 to read and display your images, I chose to convert my images to .c files and pushing them to the screen using the TFT_eSPI.h library in the Arduino IDE.
+- To install this, open your Arduino IDE and go to the Library Manager (It looks like four vertical books on the left side)
+- Type in TFT_eSPI and download the one by Bodmer
 
-There are multiple ways to get your ESP32 to read and display your images, I chose to convert my images to .c files and pushing them to the screen using the TFT_eSPI.h library in the Arduino IDE.  
-
-**Create Your Own Slideshow**  
+# Create Your Own Slideshow - Tutorial #  
 - Resize your images accordingly.
   - I used the [Microsoft PowerToys](https://apps.microsoft.com/detail/xp89dcgq3k6vld?hl=en-US&gl=US) app and resized my portrait images to 135x180 and landscapes to 180x135.
 - Convert to .c files.
@@ -29,4 +30,52 @@ There are multiple ways to get your ESP32 to read and display your images, I cho
 - Now depending on what you named your files and how many you added, you may need to change the code slightly.
 
 # Code adjustments and Logic Explanation
+As stated above, some minor adjustments may need to take place in order for your program to work, nothing too crazy, I promise!  
+- Below are some simple if-statements with instructions, I figure this format is fitting since if-statements are part of our nature as coders.
+  
+**If you changed your PORTRAIT image file names differently**  
+- After line 4 (portraits) of the code, rename the files in quotes to whatever your file names are.
+  - e.g if your filename is imagePortrait0.h, change the line that says *#include "imagePT0.h"* to *#include "imagePortrait0.h"*
+- After line 20 (array portrait) of the code, rename the files in the list to whatever your file names are.
+  - e.g if your filename is imagePortrait0.h, change the line that says *imagePT0,* to *imagePortrait0,*
+  
+**If you changed your LANDSCAPE image file names differently**  
+- After line 11 (landscapes) of the code, rename the files in quotes to whatever your file names are.
+  - e.g if your filename is imageLandscape0.h, change the line that says *#include "imageLS0.h"* to *#include "imageLandscape0.h"*
+- After line 31 (array landscape) of the code, rename the files in the list to whatever your file names are.
+  - e.g if your filename is imageLandscape0.h, change the line that says *imageLS0,* to *imageLandscape0,*
+  
+**If your have more or less image files**
+- If your have less portrait/landscape pictures than from what I have in the code, follow the instructions above and simply delete any files from the *#include ...* lists and from the arrays (array landscape/array portrait) RESPECTIVELY.
+- If your have more portrait/landscape pictures than from what I have in the code, follow the instructions above and simply add any files to the *#include ...* lists and to the arrays (array landscape/array portrait) RESPECTIVELY.
+  
+**If you resized your images differently**
+- If you resized your PORTRAIT images differently, go down to the *int loopPortrait(int i)* function and change the numbers 135, and 180 in *tft.pushImage(0, 0, 135, 180, currentImage);* to whatever your sizes are.
+  - e.g if your image size is 100x120, the code should look like *tft.pushImage(0, 0, 100, 120, currentImage);*
+- If you resized your LANDSCAPE images differently, go down to the *int loopLandscape(int i)* function and change the numbers 135, and 180 in *tft.pushImage(0, 0, 135, 180, currentImage);* to whatever your sizes are.
+  - e.g if your image size is 120x100, the code should look like *tft.pushImage(0, 0, 120, 100, currentImage);*
+  - e.g if your image size is 200x150, the code should look like *tft.pushImage(0, 0, 200, 150, currentImage);*
 
+# Change the TIMER
+***WARNING**: If flashing images are an issue for you, I recommend keeping the value to no less than 5000, otherwise you will have images cycling like crazy on the display.*  
+If you'd like to shorten or extend the amount time that each image is displayed for, simply go to the line that says *const unsigned long interval = 5000;* and change the 5000 to whatever you'd like
+  - Note that 5000 is roughly equal to 5 seconds, so every 1000 is about a second.
+  - e.g 10,000 is roughly equal to 10 seconds
+
+# Adding Buttons (OPTIONAL)
+Notice! - Buttons are not needed as the program will cycle through your images every 5000 seconds (more or less depending on your changes)  
+This project was made to fit inside a Kingdom Hearts - Pink Agaricus, so I needed it to have buttons that extended out. The buttons on the board itself were too restrictive in terms of space.
+- If you'd like to add your own wires for buttons to traverse through the pictures, I used pins 25(Left Button) and 21(Right Button) and the bottom and top Ground labeled G on the left side of the board for the buttons.  
+<img width="788" height="733" alt="image" src="https://github.com/user-attachments/assets/0e6a45bb-3e58-482c-a0c3-4c6b3580cade" />
+
+**Soldering**  
+***WARNING** Solder with caution and follow the steps closely, if you are not confident in doing this, I suggest looking into tutorials beforehand to avoid damaging your board.*  
+- For the Left Button (To go to the next image):
+  - I soldered the end of one wire to pin 25 and the other end of the wire to one side of the button.
+  - I soldered a DIFFERENT wire to the bottom G pin and the other end of the wire to the other side of the button that has not been used.
+ 
+- For the Right Button (To go to the previous image):
+  - I soldered the end of one wire to pin 21 and the other end of the wire to one side of the button.
+  - I soldered a DIFFERENT wire to the top G pin and the other end of the wire to the other side of the button that was not used.
+
+You should now have a fully functioning mini slideshow display with buttons to sift through your pictures!
